@@ -2,16 +2,18 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CategoriesRoutingModule } from './categories-routing.module';
-import { CategoriaListComponent } from './category-list/categoria-list.component';
+import { CategoryListComponent } from './category-list';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
   declarations: [
-    CategoriaListComponent,
+    CategoryListComponent,
   ],
   imports: [
     CommonModule,
     CategoriesRoutingModule,
+    MatTableModule,
   ],
 })
 export class CategoriesModule {
