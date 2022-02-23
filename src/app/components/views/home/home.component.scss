@@ -3,6 +3,14 @@
   margin: 1rem auto;
 }
 
+.card-title {
+  padding: 0.2rem;
+}
+
+.card-subtitle {
+  padding: 0.2rem;
+}
+
 @media(max-width: 1080px) {
   .card {
     width: 90%;
