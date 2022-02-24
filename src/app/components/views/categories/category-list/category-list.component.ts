@@ -9,7 +9,7 @@ import { Category } from '../shared';
 })
 export class CategoryListComponent implements OnInit {
 
-  displayedColumns: string[] = [ 'id', 'name', 'description', 'actions' ];
+  displayedColumns: string[] = [ 'id', 'name', 'description', 'books', 'actions' ];
   categories: Category[] = [];
 
   constructor(private service: CategoryService) {
