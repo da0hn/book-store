@@ -1,1 +1,18 @@
-<p>category-new works!</p>
+<form>
+  <h1>CRIANDO NOVA CATEGORIA</h1>
+
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" name="name" placeholder="Ex. Computação">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput type="text" name="description" placeholder="Ex. Livros de computação"></textarea>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+    <button class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
+  </div>
+
+</form>
