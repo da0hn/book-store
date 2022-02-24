@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Clean Code",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
+    },
+    {
+      "id": 2,
+      "name": "Test Drive Development",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
+    },
+    {
+      "id": 3,
+      "name": "The Pragmatic Programmer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
+    },
+    {
+      "id": 4,
+      "name": "Domain-driven Design",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
+    }
+  ]
+}
