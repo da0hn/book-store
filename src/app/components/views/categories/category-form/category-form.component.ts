@@ -6,10 +6,10 @@ import { SnackService } from '../../../shared';
 
 @Component({
   selector: 'app-category-new',
-  templateUrl: './category-new.component.html',
-  styleUrls: [ './category-new.component.scss' ],
+  templateUrl: './category-form.component.html',
+  styleUrls: [ './category-form.component.scss' ],
 })
-export class CategoryNewComponent implements OnInit {
+export class CategoryFormComponent implements OnInit {
 
   categoryForm!: FormGroup;
 
