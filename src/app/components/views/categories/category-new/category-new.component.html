@@ -1,18 +1,18 @@
-<form>
+<form (submit)="submitForm()" [formGroup]="categoryForm">
   <h1>CRIANDO NOVA CATEGORIA</h1>
 
   <mat-form-field appearance="outline" class="form">
     <mat-label>Nome</mat-label>
-    <input matInput type="text" name="name" placeholder="Ex. Computação">
+    <input formControlName="name" matInput name="name" placeholder="Ex. Computação" type="text">
   </mat-form-field>
   <mat-form-field appearance="outline" class="form">
     <mat-label>Descrição</mat-label>
-    <textarea matInput type="text" name="description" placeholder="Ex. Livros de computação"></textarea>
+    <textarea formControlName="description" matInput name="description" placeholder="Ex. Livros de computação" type="text"></textarea>
   </mat-form-field>
 
   <div class="buttons">
-    <button class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
-    <button class="mat-elevation-z8" mat-stroked-button color="primary">CRIAR</button>
+    <button class="mat-elevation-z8" color="warn" mat-stroked-button routerLink="/categorias">CANCELAR</button>
+    <button class="mat-elevation-z8" color="primary" mat-stroked-button type="submit">CRIAR</button>
   </div>
 
 </form>

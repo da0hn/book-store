@@ -19,6 +19,26 @@
       "id": 4,
       "name": "Domain-driven Design",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
+    },
+    {
+      "name": "Categoria 1",
+      "description": "Descrição da Categoria 1",
+      "id": 5
+    },
+    {
+      "name": "Categoria 2",
+      "description": "Descrição categoria 2",
+      "id": 6
+    },
+    {
+      "name": "Categoria 3",
+      "description": "Descrição da categoria 3",
+      "id": 7
+    },
+    {
+      "name": "Categoria 4",
+      "description": "Descrição da categoria 4",
+      "id": 8
     }
   ]
 }
