@@ -15,6 +15,7 @@ export class CategoryFormComponent implements OnInit {
   categoryForm!: FormGroup;
   currentAction!: string;
   idCategory!: number;
+  pageTitle!: string;
 
   constructor(
     private service: CategoryService,
@@ -70,11 +71,14 @@ export class CategoryFormComponent implements OnInit {
       this.route.paramMap.pipe(
         map(param => +param.get('id')!),
         tap((idCategory: number) => this.idCategory = idCategory),
-        switchMap(idCategory => this.service.findById(idCategory),
+        switchMap(idCategory => this.service.findById(idCategory).pipe(
+            tap(category => this.pageTitle = `Editando categoria: ${ category.name || '' }`),
+          ),
         ),
-      ).subscribe(category => {
-        this.categoryForm.patchValue(category);
-      });
+      ).subscribe(category => this.categoryForm.patchValue(category));
+
+    } else {
+      this.pageTitle = `Criando nova categoria`;
     }
   }
 

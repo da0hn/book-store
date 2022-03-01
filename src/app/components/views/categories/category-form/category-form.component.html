@@ -1,5 +1,8 @@
 <form (submit)="submitForm()" [formGroup]="categoryForm">
-  <h1>CRIANDO NOVA CATEGORIA</h1>
+
+  <div>
+    <h1>{{pageTitle}}</h1>
+  </div>
 
   <mat-form-field appearance="outline" class="form">
     <mat-label>Nome</mat-label>
