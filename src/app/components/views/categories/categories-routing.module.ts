@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CategoryListComponent } from './category-list';
-import { CategoryFormComponent } from './category-form/category-form.component';
-import { CategoryDeleteComponent } from './category-delete/category-delete.component';
+import { CategoryListComponent, CategoryFormComponent, CategoryDeleteComponent } from '@book-store/views/categories';
 
-const routes: Routes = [
+let routes: Routes;
+routes = [
   {
     path: '',
     component: CategoryListComponent,

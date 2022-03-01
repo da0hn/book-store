@@ -17,10 +17,31 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@book-store/*": [
+        "src/app/*"
+      ],
+      "@book-store/views/*": [
+        "src/app/components/views/*",
+        "src/app/components/views/categories/*",
+        "src/app/components/views/home/*"
+      ],
+      "@book-store/template/*": [
+        "src/app/components/template/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

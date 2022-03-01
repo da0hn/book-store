@@ -29,7 +29,7 @@
         <th *matHeaderCellDef class="action-header" mat-header-cell>AÇÕES</th>
         <td *matCellDef="let element" mat-cell>
           <a [routerLink]="[element.id, 'edit']" class="row-edit"><i class="material-icons">edit</i></a>
-          <a [routerLink]="[element.id, 'delete']" class="row-delete" href="#"><i class="material-icons">delete</i></a>
+          <a [routerLink]="[element.id, 'delete']" class="row-delete"><i class="material-icons">delete</i></a>
         </td>
       </ng-container>
       <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>

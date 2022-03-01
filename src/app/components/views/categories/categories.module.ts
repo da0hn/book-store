@@ -5,11 +5,11 @@ import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoryListComponent } from './category-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-import { CategoryFormComponent } from './category-form/category-form.component';
+import { CategoryFormComponent } from '@book-store/views/category-form';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { CategoryDeleteComponent } from './category-delete/category-delete.component';
+import { CategoryDeleteComponent } from '@book-store/views/category-delete';
 
 
 @NgModule({

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Category, CategoryService } from '../shared';
+import { Category, CategoryService } from '@book-store/views/categories';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SnackService } from '../../../shared';
+import { SnackService } from '@book-store/components/shared';
 import { map, switchMap, tap } from 'rxjs';
 
 @Component({

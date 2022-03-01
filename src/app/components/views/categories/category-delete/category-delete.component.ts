@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Category, CategoryService } from '../shared';
+import { Category, CategoryService } from '@book-store/views/categories/shared';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap } from 'rxjs';
-import { SnackService } from '../../../shared';
+import { SnackService } from '@book-store/components/shared';
 
 @Component({
   selector: 'app-category-delete',
