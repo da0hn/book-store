@@ -31,14 +31,24 @@
       "id": 6
     },
     {
-      "name": "Categoria 3",
-      "description": "Descrição da categoria 3",
-      "id": 7
+      "id": 7,
+      "name": "Categoria 3 editada",
+      "description": "Descrição da categoria 3"
     },
     {
       "name": "Categoria 4",
       "description": "Descrição da categoria 4",
       "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Categoria 5",
+      "description": "Descrição categoria 5"
+    },
+    {
+      "id": 10,
+      "name": "Categoria Editada 5123132",
+      "description": "Descrição da Categoria 5"
     }
   ]
 }
