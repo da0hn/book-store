@@ -1,0 +1,20 @@
+<form *ngIf="category">
+  <div>
+    <h1>Tem certeza que deseja deletar a categoria {{category.name}}?</h1>
+  </div>
+
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="category.name" [disabled]="true" matInput name="name" type="text">
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Descrição</mat-label>
+    <textarea [(ngModel)]="category.description" [disabled]="true" matInput name="description" type="text"></textarea>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button (click)="cancel()" class="mat-elevation-z8" color="warn" mat-stroked-button type="button">CANCELAR</button>
+    <button (click)="delete()" class="mat-elevation-z8" color="primary" mat-stroked-button type="submit">DELETAR</button>
+  </div>
+
+</form>

@@ -9,12 +9,14 @@ import { CategoryFormComponent } from './category-form/category-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { CategoryDeleteComponent } from './category-delete/category-delete.component';
 
 
 @NgModule({
   declarations: [
     CategoryListComponent,
     CategoryFormComponent,
+    CategoryDeleteComponent,
   ],
   imports: [
     CommonModule,

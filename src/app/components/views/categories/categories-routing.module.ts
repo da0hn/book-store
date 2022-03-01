@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryListComponent } from './category-list';
 import { CategoryFormComponent } from './category-form/category-form.component';
+import { CategoryDeleteComponent } from './category-delete/category-delete.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
   {
     path: ':id/edit',
     component: CategoryFormComponent,
+  },
+  {
+    path: ':id/delete',
+    component: CategoryDeleteComponent,
   },
 ];
 

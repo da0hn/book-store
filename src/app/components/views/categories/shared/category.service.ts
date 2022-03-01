@@ -29,4 +29,8 @@ export class CategoryService {
   findById(id: number): Observable<Category> {
     return this.http.get<Category>(`${ this.baseUrl }/categories/${ id }`);
   }
+
+  deleteById(id: number): Observable<Category> {
+    return this.http.delete<Category>(`${ this.baseUrl }/categories/${ id }`);
+  }
 }

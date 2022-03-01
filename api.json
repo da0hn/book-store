@@ -1,26 +1,6 @@
 {
   "categories": [
     {
-      "id": 1,
-      "name": "Clean Code",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
-    },
-    {
-      "id": 2,
-      "name": "Test Drive Development",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
-    },
-    {
-      "id": 3,
-      "name": "The Pragmatic Programmer",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
-    },
-    {
-      "id": 4,
-      "name": "Domain-driven Design",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit aliqua."
-    },
-    {
       "name": "Categoria 1",
       "description": "Descrição da Categoria 1",
       "id": 5
@@ -31,11 +11,6 @@
       "id": 6
     },
     {
-      "id": 7,
-      "name": "Categoria 3 editada",
-      "description": "Descrição da categoria 3"
-    },
-    {
       "name": "Categoria 4",
       "description": "Descrição da categoria 4",
       "id": 8
@@ -44,11 +19,6 @@
       "id": 9,
       "name": "Categoria 5",
       "description": "Descrição categoria 5"
-    },
-    {
-      "id": 10,
-      "name": "Categoria Editada 5123132",
-      "description": "Descrição da Categoria 5"
     }
   ]
 }
