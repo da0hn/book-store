@@ -36,7 +36,7 @@ export class CategoryFormComponent implements OnInit {
     this.service.create(category)
       .subscribe(async _ => {
         this.snackbarService.message({ message: 'Categoria criada com sucesso!' });
-        await this.router.navigate([ 'categorias' ]);
+        await this.router.navigate([ 'categories' ]);
       });
   }
 
@@ -85,7 +85,7 @@ export class CategoryFormComponent implements OnInit {
   private update(category: Category) {
     this.service.update(category).subscribe(async _ => {
       this.snackbarService.message({ message: `Categoria atualizada com sucesso` });
-      await this.router.navigate([ 'categorias' ]);
+      await this.router.navigate([ 'categories' ]);
     });
   }
 }

@@ -35,11 +35,11 @@ export class CategoryDeleteComponent implements OnInit {
   delete() {
     this.service.deleteById(this.category.id!).subscribe(async _ => {
       this.snackbarService.message({ message: 'Categoria deletada com sucesso' });
-      await this.router.navigate([ 'categorias' ]);
+      await this.router.navigate([ 'categories' ]);
     });
   }
 
   async cancel(): Promise<void> {
-    await this.router.navigate([ 'categorias' ]);
+    await this.router.navigate([ 'categories' ]);
   }
 }
