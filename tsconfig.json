@@ -30,7 +30,8 @@
       "@book-store/views/*": [
         "src/app/components/views/*",
         "src/app/components/views/categories/*",
-        "src/app/components/views/home/*"
+        "src/app/components/views/home/*",
+        "src/app/components/views/books/*"
       ],
       "@book-store/template/*": [
         "src/app/components/template/*"
