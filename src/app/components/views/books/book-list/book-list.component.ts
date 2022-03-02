@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Book } from '@book-store/views/books/shared';
+import { BookTableView } from '@book-store/views/books/shared';
+import { BookService } from '@book-store/views/shared/book.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { map, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-book-list',
@@ -9,12 +12,20 @@ import { Book } from '@book-store/views/books/shared';
 export class BookListComponent implements OnInit {
 
   displayedColumns: string[] = [ 'id', 'title', 'read-book', 'actions' ];
-  books: Book[] = [];
+  books: BookTableView[] = [];
 
-  constructor() {
+  constructor(
+    private service: BookService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) {
   }
 
   ngOnInit(): void {
+    this.route.paramMap.pipe(
+      map(param => +param.get('idCategory')!),
+      switchMap((idCategory: number) => this.service.findAllByCategory(idCategory)),
+    ).subscribe(books => this.books = books);
   }
 
 }
