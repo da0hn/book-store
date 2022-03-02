@@ -11,7 +11,7 @@ const routes: Routes = [
     loadChildren: () => import('./components/views/categories/categories.module').then(mod => mod.CategoriesModule),
   },
   {
-    path: 'books',
+    path: 'categories/:idCategory/books',
     loadChildren: () => import('./components/views/books/books.module').then(mod => mod.BooksModule),
   },
 ];
