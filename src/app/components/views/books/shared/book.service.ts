@@ -15,7 +15,7 @@ export class BookService {
   }
 
   findAllByCategory(idCategory: number): Observable<BookTableView[]> {
-    return this.http.get<BookTableView[]>(`${this.baseUrl}/books?category=${idCategory}`);
+    return this.http.get<BookTableView[]>(`${this.baseUrl}/books?idCategory=${idCategory}`);
   }
 
   findById(idCategory: number): Observable<Book> {
