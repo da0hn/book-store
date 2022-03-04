@@ -22,7 +22,9 @@
       <ng-container matColumnDef="books">
         <th *matHeaderCellDef mat-header-cell>LIVROS</th>
         <td *matCellDef="let element" mat-cell>
-          <a class="row-book" [routerLink]="[element.id, 'books']"><i class="material-icons">book</i></a>
+          <a (click)="routeToBooks(element)" class="row-book">
+            <i class="material-icons">book</i>
+          </a>
         </td>
       </ng-container>
       <ng-container matColumnDef="actions">

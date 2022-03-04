@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category, CategoryService } from '@book-store/views/categories/shared';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CurrentCategoryName } from '@book-store/components/shared';
 
 @Component({
   selector: 'app-categoria-list',
@@ -11,7 +13,12 @@ export class CategoryListComponent implements OnInit {
   displayedColumns: string[] = [ 'id', 'name', 'description', 'books', 'actions' ];
   categories: Category[] = [];
 
-  constructor(private service: CategoryService) {
+  constructor(
+    private currentCategoryName: CurrentCategoryName,
+    private service: CategoryService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ) {
   }
 
   ngOnInit(): void {
@@ -25,4 +32,8 @@ export class CategoryListComponent implements OnInit {
       });
   }
 
+  async routeToBooks(category: Category): Promise<void> {
+    this.currentCategoryName.emit({ name: category.name });
+    await this.router.navigate([ category.id, 'books' ], { relativeTo: this.route });
+  }
 }
