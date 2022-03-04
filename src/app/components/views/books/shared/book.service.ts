@@ -18,8 +18,8 @@ export class BookService {
     return this.http.get<BookTableView[]>(`${this.baseUrl}/books?idCategory=${idCategory}`);
   }
 
-  findById(idCategory: number): Observable<Book> {
-    return this.http.get<Book>(`${this.baseUrl}/books/${idCategory}`);
+  findById(idBook: number): Observable<Book> {
+    return this.http.get<Book>(`${this.baseUrl}/books/${idBook}`);
   }
 
   save(newBook: Book): Observable<Book> {
