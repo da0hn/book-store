@@ -45,6 +45,11 @@ export class BookFormComponent implements OnInit {
     }
   }
 
+  async cancel(): Promise<void> {
+    const idCategory = this.bookForm.getRawValue().idCategory!;
+    await this.router.navigate([ 'categories', idCategory, 'books' ]);
+  }
+
   private initForm(): void {
     this.bookForm = this.formBuilder.group({
       title: [ null, Validators.required ],
