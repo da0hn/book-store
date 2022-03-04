@@ -1,0 +1,35 @@
+<form (submit)="submitForm()" [formGroup]="bookForm">
+  <div>
+    <h1>{{pageTitle}}</h1>
+  </div>
+
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Título</mat-label>
+    <input formControlName="title" matInput name="name" placeholder="Ex: Drive Domain Design" type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Categoria</mat-label>
+    <mat-select [formControl]="categoriesControl">
+      <mat-option *ngFor="let category of categories" [value]="category.id">
+        {{category.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Autor</mat-label>
+    <input formControlName="author" matInput name="author" placeholder="Ex: Eric Evans" type="text">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form">
+    <mat-label>Conteúdo</mat-label>
+    <textarea formControlName="content" matInput name="content" placeholder="Ex: lorem ipsum..." type="text"></textarea>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button [routerLink]="['/']" class="mat-elevation-z8" color="warn" mat-stroked-button type="button">CANCELAR</button>
+    <button class="mat-elevation-z8" color="primary" mat-stroked-button type="submit">CRIAR</button>
+  </div>
+</form>
