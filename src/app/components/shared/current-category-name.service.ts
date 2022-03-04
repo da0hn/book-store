@@ -4,7 +4,7 @@ import { Observable, ReplaySubject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class CurrentCategoryName {
+export class CurrentCategoryService {
 
   private readonly _categoryName$: ReplaySubject<string>;
 

@@ -6,15 +6,17 @@ import { BookListComponent } from '@book-store/views/book-list';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { BookFormComponent } from '@book-store/views/book-form';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { BookDeleteComponent } from './book-delete/book-delete.component';
 
 
 @NgModule({
   declarations: [
     BookListComponent,
     BookFormComponent,
+    BookDeleteComponent,
   ],
   imports: [
     CommonModule,
@@ -24,6 +26,7 @@ import { MatSelectModule } from '@angular/material/select';
     ReactiveFormsModule,
     MatInputModule,
     MatSelectModule,
+    FormsModule,
   ],
 })
 export class BooksModule {

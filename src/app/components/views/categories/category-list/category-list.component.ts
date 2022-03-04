@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category, CategoryService } from '@book-store/views/categories/shared';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CurrentCategoryName } from '@book-store/components/shared';
+import { CurrentCategoryService } from '@book-store/components/shared';
 
 @Component({
   selector: 'app-categoria-list',
@@ -14,7 +14,7 @@ export class CategoryListComponent implements OnInit {
   categories: Category[] = [];
 
   constructor(
-    private currentCategoryName: CurrentCategoryName,
+    private currentCategoryName: CurrentCategoryService,
     private service: CategoryService,
     private router: Router,
     private route: ActivatedRoute,

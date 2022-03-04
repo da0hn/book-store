@@ -3,7 +3,7 @@ import { BookTableView } from '@book-store/views/books/shared';
 import { BookService } from '@book-store/views/shared/book.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { map, switchMap, take } from 'rxjs';
-import { CurrentCategoryName } from '@book-store/components/shared';
+import { CurrentCategoryService } from '@book-store/components/shared';
 
 @Component({
   selector: 'app-book-list',
@@ -18,14 +18,14 @@ export class BookListComponent implements OnInit {
 
   constructor(
     private service: BookService,
-    private categoryNameService: CurrentCategoryName,
+    private currentCategoryService: CurrentCategoryService,
     private route: ActivatedRoute,
     private router: Router,
   ) {
   }
 
   ngOnInit(): void {
-    this.categoryNameService.categoryName$
+    this.currentCategoryService.categoryName$
       .pipe(take(1))
       .subscribe((value: string) => this.categoryName = value);
 
@@ -34,7 +34,10 @@ export class BookListComponent implements OnInit {
       map(param => +param.get('idCategory')!),
       switchMap((idCategory: number) => this.service.findAllByCategory(idCategory)),
     ).subscribe(books => this.books = books);
-
   }
 
+  async navigateToDelete(book: BookTableView): Promise<void> {
+    this.currentCategoryService.emit({ name: this.categoryName });
+    await this.router.navigate([ book.id, 'delete' ], { relativeTo: this.route });
+  }
 }
