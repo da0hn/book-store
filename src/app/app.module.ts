@@ -11,6 +11,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from '@book-store/app-routing.module';
 import { AppComponent } from '@book-store/app.component';
 import { FooterComponent, HeaderComponent, NavComponent } from '@book-store/components/template';
+import { InMemoryDatabase } from '@book-store/in-memory-database';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { FooterComponent, HeaderComponent, NavComponent } from '@book-store/comp
     MatListModule,
     MatIconModule,
     MatSnackBarModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDatabase),
   ],
   providers: [],
   bootstrap: [ AppComponent ],
