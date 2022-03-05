@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookFormComponent, BookListComponent } from '@book-store/views/books';
 import { BookDeleteComponent } from '@book-store/views/book-delete/book-delete.component';
+import { BookReadComponent } from '@book-store/views/book-read/book-read.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: ':id/delete',
     component: BookDeleteComponent,
+  },
+  {
+    path: ':id',
+    component: BookReadComponent,
   },
 ];
 

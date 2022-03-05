@@ -10,6 +10,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { BookDeleteComponent } from './book-delete/book-delete.component';
+import { BookReadComponent } from './book-read/book-read.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -17,6 +20,7 @@ import { BookDeleteComponent } from './book-delete/book-delete.component';
     BookListComponent,
     BookFormComponent,
     BookDeleteComponent,
+    BookReadComponent,
   ],
   imports: [
     CommonModule,
@@ -27,6 +31,8 @@ import { BookDeleteComponent } from './book-delete/book-delete.component';
     MatInputModule,
     MatSelectModule,
     FormsModule,
+    MatCardModule,
+    MatIconModule,
   ],
 })
 export class BooksModule {
