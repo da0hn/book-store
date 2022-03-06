@@ -1,6 +1,6 @@
 # Book Store Application
 
-Application developed to practice Angular.
+Application developed to practice Angular. Based on Youtube tutorial of channel [Dicas de um Dev](https://www.youtube.com/playlist?list=PLA8Qj9w4RGkVOj-xGYJCHJ0Ob4CMg-8NI)
 
 # Run Application
 
